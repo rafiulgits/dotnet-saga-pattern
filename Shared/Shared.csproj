@@ -6,10 +6,12 @@
 
   <ItemGroup>
     <None Remove="Messages\" />
-    <None Remove="Messages\IntegrationEvents\" />
+    <None Remove="Messages\IntegrationEvent\" />
+    <None Remove="Constants\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Messages\" />
     <Folder Include="Messages\IntegrationEvents\" />
+    <Folder Include="Constants\" />
   </ItemGroup>
 </Project>

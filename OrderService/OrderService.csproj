@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Controllers\" />
+    <None Remove="Db\" />
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Rebus" />
+    <None Remove="Rebus.RabbitMq" />
+    <None Remove="Rebus.ServiceProvider" />
+    <None Remove="ServiceHandlers\" />
+    <None Remove="ServiceHandlers\Commands\" />
+    <None Remove="BusHandlers\Events\" />
+    <None Remove="BusHandlers\CommandHandlers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Db\" />
+    <Folder Include="BusHandlers\" />
+    <Folder Include="BusHandlers\Commands\" />
+    <Folder Include="BusHandlers\EventHandlers\" />
+    <Folder Include="BusHandlers\CommandHandlers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.2" />
+    <PackageReference Include="Rebus" Version="6.6.2" />
+    <PackageReference Include="Rebus.RabbitMq" Version="7.3.4" />
+    <PackageReference Include="Rebus.ServiceProvider" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
