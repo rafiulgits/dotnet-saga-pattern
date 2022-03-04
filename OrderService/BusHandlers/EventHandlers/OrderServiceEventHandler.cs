@@ -18,7 +18,14 @@ namespace OrderService.BusHandlers.EventHandlers
         {
             Console.WriteLine("Order service received StockUpdateCompletedEvent");
             Console.WriteLine("StartOrderCreateCommand sending...");
-            await bus.Send(new StartOrderCreateCommand { AggregateId = message.AggregateId });
+            var startOrderCreateCommand = new StartOrderCreateCommand
+            {
+                AggregateId = message.AggregateId,
+                ProductId = message.ProductId,
+                Quantity = message.Quantity,
+                Amount = message.Amount
+            };
+            await bus.Send(startOrderCreateCommand);
         }
     }
 }

@@ -18,7 +18,13 @@ namespace ProductService.BusHandlers.EventHandlers
         {
             Console.WriteLine("Product service received that 'OrderPlaceEvent' fired");
             Console.WriteLine("StartStockUpdateCommand sending");
-            await bus.Send(new StartStockUpdateCommand { AggregateId = message.AggregateId });
+            var startStockUpdateCommand = new StartStockUpdateCommand
+            {
+                AggregateId = message.AggregateId,
+                ProductId = message.ProductId,
+                Quantity = message.Quantity
+            };
+            await bus.Send(startStockUpdateCommand);
         }
     }
 }

@@ -17,12 +17,12 @@ namespace OrchestratorApi.Controllers
         }
 
         [HttpGet("")]
-        public async Task<ActionResult> StartSaga()
+        public async Task<ActionResult> StartOrderProcess()
         {
             var id = Guid.NewGuid();
-            await bus.Send(new OrderProcessStartCommand { AggregateId = id });
+            await bus.Send(new OrderProcessStartCommand { AggregateId = id, ProductId = 2, Quantity = 5 });
 
-            return Ok(new { Message = "Saga started", Id = id });
+            return Ok(new { Message = "Order process started", Id = id, ProductId = 2, Quantity = 5 });
         }
     }
 }

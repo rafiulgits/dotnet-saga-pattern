@@ -17,7 +17,15 @@ namespace OrchestratorApi.Orchestrator.OrderOrchestrator
 
         public async Task Handle(StockUpdateFinishedEvent message)
         {
-            await bus.Publish(new StockUpdateCompletedEvent { AggregateId = message.AggregateId });
+            Console.WriteLine("Orchestrator received StockUpdateFinishedEvent");
+            var stockUpdateCompletedEvent = new StockUpdateCompletedEvent
+            {
+                AggregateId = message.AggregateId,
+                ProductId = message.ProductId,
+                Quantity = message.Quantity,
+                Amount = message.Amount
+            };
+            await bus.Publish(stockUpdateCompletedEvent);
             Data.ProductStockUpdated = true;
             ProcessSagaData();
         }
@@ -32,7 +40,13 @@ namespace OrchestratorApi.Orchestrator.OrderOrchestrator
         public async Task Handle(OrderProcessStartCommand message)
         {
             Console.WriteLine("Order process start command called");
-            await bus.Publish(new OrderPlaceEvent { AggregateId = message.AggregateId });
+            var orderPlaceEvent = new OrderPlaceEvent
+            {
+                AggregateId = message.AggregateId,
+                ProductId = message.ProductId,
+                Quantity = message.Quantity
+            };
+            await bus.Publish(orderPlaceEvent);
             Console.WriteLine("Publish event: OrderPlaceEvent");
             Data.OrderProcessingStarted = true;
             ProcessSagaData();

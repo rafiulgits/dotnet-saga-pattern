@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "OrderServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchestratorApi", "OrchestratorApi\OrchestratorApi.csproj", "{5541B539-81A8-4978-A502-5D1BD2C7DB86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{BACC0B18-CA72-4EB2-B75E-177C0E07DE51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{9EEEE8AC-26ED-4FE1-B1F8-3D886666FDEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{5541B539-81A8-4978-A502-5D1BD2C7DB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5541B539-81A8-4978-A502-5D1BD2C7DB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5541B539-81A8-4978-A502-5D1BD2C7DB86}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BACC0B18-CA72-4EB2-B75E-177C0E07DE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BACC0B18-CA72-4EB2-B75E-177C0E07DE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BACC0B18-CA72-4EB2-B75E-177C0E07DE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BACC0B18-CA72-4EB2-B75E-177C0E07DE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EEEE8AC-26ED-4FE1-B1F8-3D886666FDEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EEEE8AC-26ED-4FE1-B1F8-3D886666FDEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EEEE8AC-26ED-4FE1-B1F8-3D886666FDEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EEEE8AC-26ED-4FE1-B1F8-3D886666FDEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -40,7 +40,6 @@ var app = builder.Build();
 
 app.Services.UseRebus(async bus =>
 {
-    await bus.Subscribe<OrderPlaceEvent>();
     await bus.Subscribe<StockUpdateFinishedEvent>();
     await bus.Subscribe<OrderCreateFinishedEvent>();
 });

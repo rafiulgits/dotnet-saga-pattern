@@ -16,7 +16,6 @@ namespace ProductService.Db
                 options.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
             });
             base.OnConfiguring(optionsBuilder);
-            base.OnConfiguring(optionsBuilder);
         }
 
     }
