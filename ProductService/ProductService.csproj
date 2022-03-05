@@ -4,6 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>60e52ef0-2065-4a44-a43b-07d688be36e0</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

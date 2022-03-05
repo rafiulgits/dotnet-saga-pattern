@@ -30,7 +30,6 @@ builder.Services.AddRebus(configure => configure
             );
 
 builder.Services.AutoRegisterHandlersFromAssemblyOf<OrderOrchestrator>();
-
 builder.Services.AddControllers();
 
 var app = builder.Build();
@@ -44,7 +43,6 @@ app.Services.UseRebus(async bus =>
     await bus.Subscribe<OrderCreateFinishedEvent>();
 });
 
-app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();

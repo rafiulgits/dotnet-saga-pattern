@@ -53,7 +53,6 @@ app.Services.UseRebus(async bus =>
     await bus.Subscribe<OrderPlaceEvent>();
 });
 
-app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();

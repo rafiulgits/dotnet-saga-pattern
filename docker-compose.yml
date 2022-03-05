@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+  orchestratorapi:
+    image: ${DOCKER_REGISTRY-}orchestratorapi
+    build:
+      context: .
+      dockerfile: OrchestratorApi/Dockerfile
+    restart: on-failure
+    depends_on:
+      - rabbitmq
+
+
+  orderservice:
+    image: ${DOCKER_REGISTRY-}orderservice
+    build:
+      context: .
+      dockerfile: OrderService/Dockerfile
+    restart: on-failure
+    depends_on:
+      - rabbitmq
+
+
+  productservice:
+    image: ${DOCKER_REGISTRY-}productservice
+    build:
+      context: .
+      dockerfile: ProductService/Dockerfile
+    restart: on-failure
+    depends_on:
+      - rabbitmq
+
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'

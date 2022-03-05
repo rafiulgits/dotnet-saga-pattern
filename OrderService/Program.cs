@@ -51,7 +51,6 @@ app.Services.UseRebus(async bus =>
     await bus.Subscribe<StockUpdateCompletedEvent>();
 });
 
-app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
