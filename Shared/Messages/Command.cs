@@ -1,10 +1,9 @@
 ﻿using System;
-
 namespace Shared.Messages
 {
-    public abstract class Command : Message
+    public class Command : Message
     {
-
+        
     }
 }
 
